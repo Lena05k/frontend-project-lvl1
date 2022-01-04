@@ -4,7 +4,7 @@
 
 [![Node CI](https://github.com/Lena05k/frontend-project-lvl1/actions/workflows/nodejs.yml/badge.svg)](https://github.com/Lena05k/frontend-project-lvl1/actions/workflows/nodejs.yml)
 
-#Games : 
+# Games : 
 
 **brain-even**
 [![asciicast](https://asciinema.org/a/olgERBPo4cvUvSiom7KqfB10E.svg)](https://asciinema.org/a/olgERBPo4cvUvSiom7KqfB10E)
