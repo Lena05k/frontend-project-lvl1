@@ -2,10 +2,10 @@ import engine from '../index.js';
 
 const gameRules = 'Find the greatest common divisor of given numbers.';
 
-const nod = (a, b) => {
-  if (b !== 0) {
-    const n = a % b;
-    return nod(a, n);
+const nod = (n, m) => {
+  if (m !== 0) {
+    const k = n % m;
+    return nod(m, k);
   }
   return a;
 };
