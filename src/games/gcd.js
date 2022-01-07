@@ -7,7 +7,7 @@ const nod = (n, m) => {
     const k = n % m;
     return nod(m, k);
   }
-  return a;
+  return n;
 };
 
 const gameCheck = () => {
