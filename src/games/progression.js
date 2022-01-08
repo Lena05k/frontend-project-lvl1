@@ -22,7 +22,7 @@ const gameCheck = () => {
 
   const progress = arithmeticProgression(number, difference);
   progress[number] = '..';
-  const question = `${progress.join(' ')}`;
+  const question = `${progress.join('..')}`;
   const correctAnswer = progress[number];
   return [question, correctAnswer];
 };
