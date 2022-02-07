@@ -4,14 +4,10 @@ const gameRules = 'What number is missing in the progression?';
 
 const arithmeticProgression = (number, difference) => {
   const array = [];
-  for (let i = 0; i <= 10; i += 1) {
-    if (array.length === 10) {
-      return array;
-    } else {
-      const nextNumber = number + difference;
-      number = nextNumber;
-      array.push(nextNumber);
-    }
+  let sum = number;
+  for (let i = 0; i < 10; i += 1) {
+    sum += difference;
+    array.push(sum);
   }
   return array;
 };
