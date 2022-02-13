@@ -3,6 +3,7 @@ import engine from '../index.js';
 const gameRules = 'What is the result of the expression?';
 
 const equation = (num1, operator, num2) => {
+  console.log(operator);
   switch (operator) {
     case '+':
       return num1 + num2;
@@ -10,8 +11,6 @@ const equation = (num1, operator, num2) => {
       return num1 - num2;
     case '*':
       return num1 * num2;
-    default:
-      return false;
   }
 };
 
@@ -25,7 +24,7 @@ const gameCheck = () => {
   const randomOperation = operations[getRandomInt(0, operations.length)];
   const number1 = getRandomInt(1, 10);
   const number2 = getRandomInt(1, 10);
-  const question = `${number1}${randomOperation}${number2}`;
+  const question = `${number1} ${randomOperation} ${number2}`;
   const correctAnswer = `${equation(number1, randomOperation, number2)}`;
   return [question, correctAnswer];
 };
