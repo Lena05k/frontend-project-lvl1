@@ -15,11 +15,15 @@ const equation = (num1, operator, num2) => {
   }
 };
 
+const getRandomInt = (min, max) => {
+  return Math.floor(Math.random() * (Math.floor(max) - Math.ceil(min))) + Math.ceil(min);
+};
+
 const gameCheck = () => {
   const operations = ['+', '-', '*'];
-  const randomOperation = operations[Math.round(Math.random() * operations.length)];
-  const number1 = Math.round(Math.random() * 10);
-  const number2 = Math.round(Math.random() * 10);
+  const randomOperation = operations[getRandomInt(0, operations.length)];
+  const number1 = getRandomInt(1, 10);
+  const number2 = getRandomInt(1, 10);
   const question = `${number1}${randomOperation}${number2}`;
   const correctAnswer = `${equation(number1, randomOperation, number2)}`;
   return [question, correctAnswer];
