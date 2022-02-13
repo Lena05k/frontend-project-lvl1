@@ -25,7 +25,7 @@ const gameCheck = () => {
   const randomOperation = operations[getRandomInt(0, operations.length)];
   const number1 = getRandomInt(1, 10);
   const number2 = getRandomInt(1, 10);
-  const question = `${number1}${randomOperation}${number2}`;
+  const question = ` ${number1} ${randomOperation} ${number2}`;
   const correctAnswer = `${equation(number1, randomOperation, number2)}`;
   return [question, correctAnswer];
 };
