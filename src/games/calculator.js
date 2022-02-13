@@ -16,7 +16,8 @@ const equation = (num1, operator, num2) => {
 };
 
 const getRandomInt = (min, max) => {
-  return Math.floor(Math.random() * (Math.floor(max) - Math.ceil(min))) + Math.ceil(min);
+  const random = Math.floor(Math.random() * (Math.floor(max) - Math.ceil(min))) + Math.ceil(min);
+  return random;
 };
 
 const gameCheck = () => {
