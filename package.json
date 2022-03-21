@@ -27,8 +27,6 @@
   },
   "homepage": "https://github.com/Lena05k/frontend-project-lvl1#readme",
   "dependencies": {
-    "@types/readline-sync": "^1.4.4",
-    "make": "^0.8.1",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {

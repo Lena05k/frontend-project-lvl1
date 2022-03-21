@@ -3,15 +3,15 @@ import readlineSync from 'readline-sync';
 const roundsCount = 3;
 // edit rounds count
 
-const engine = (gameRules, gameCheck) => {
+const engine = (gameRules, getData) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
   console.log(gameRules);
 
   for (let i = 1; i <= roundsCount; i += 1) {
-    const [getQuestion, correctAnswer] = gameCheck();
-    console.log(`Question: ${getQuestion}`);
+    const [Question, correctAnswer] = getData();
+    console.log(`Question: ${Question}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
     if (userAnswer !== correctAnswer) {

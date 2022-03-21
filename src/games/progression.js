@@ -1,10 +1,11 @@
 import engine from '../index.js';
+import getRandomInt from '../utils.js';
 
 const gameRules = 'What number is missing in the progression?';
 
-const arithmeticProgression = (number, difference) => {
+const arithmeticProgression = (getNumber, difference) => {
   const array = [];
-  let sum = number;
+  let sum = getNumber;
   for (let i = 0; i < 10; i += 1) {
     sum += difference;
     array.push(sum);
@@ -12,16 +13,16 @@ const arithmeticProgression = (number, difference) => {
   return array;
 };
 
-const gameCheck = () => {
-  const number = Math.round(Math.random() * 10);
-  const difference = Math.round(Math.random() * 10);
-
-  const progress = arithmeticProgression(number, difference);
-  const correctAnswer = `${progress[number]}`;
-  progress[number] = '..';
-  const question = progress.join(' ');
+const getData = () => {
+  const getNumber = getRandomInt(1, 10);
+  const difference = getRandomInt(1, 10);
+  const getLength = getRandomInt(5, 10);
+  const index = getRandomInt(0, getLength);
+  const progression = arithmeticProgression(getNumber, difference);
+  const correctAnswer = `${progression[index]}`;
+  progression[index] = '..';
+  const question = progression.join(' ');
   return [question, correctAnswer];
 };
-const progression = () => engine(gameRules, gameCheck);
 
-export default progression;
+export default () => engine(gameRules, getData);
