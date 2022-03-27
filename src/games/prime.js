@@ -3,7 +3,6 @@ import getRandomInt from '../utils.js';
 
 const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-
 const isPrimeNumber = (number) => {
   if (number < 2) {
     return false;
