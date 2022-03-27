@@ -14,11 +14,11 @@ const arithmeticProgression = (getNumber, difference) => {
 };
 
 const getData = () => {
-  const getNumber = getRandomInt(1, 10);
+  const startProgression = getRandomInt(1, 10);
   const difference = getRandomInt(1, 10);
-  const getLength = getRandomInt(5, 10);
-  const index = getRandomInt(0, getLength);
-  const progression = arithmeticProgression(getNumber, difference);
+  const progressionLength = getRandomInt(5, 10);
+  const index = getRandomInt(0, progressionLength);
+  const progression = arithmeticProgression(startProgression, difference);
   const correctAnswer = `${progression[index]}`;
   progression[index] = '..';
   const question = progression.join(' ');

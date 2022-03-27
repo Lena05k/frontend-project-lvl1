@@ -10,8 +10,8 @@ const engine = (gameRules, getData) => {
   console.log(gameRules);
 
   for (let i = 1; i <= roundsCount; i += 1) {
-    const [Question, correctAnswer] = getData();
-    console.log(`Question: ${Question}`);
+    const [question, correctAnswer] = getData();
+    console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
     if (userAnswer !== correctAnswer) {
