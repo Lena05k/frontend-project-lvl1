@@ -10,10 +10,6 @@
 4. **brain-progression** - calculate the greatest common divisor of 2 numbers
 5. **brain-prime** - check a number for primality
 
-```
- Tech stack: JavaScript, Node.js, ESLint, readline-sync
-```
-
 # Games vi: 
 
 **brain-even**
